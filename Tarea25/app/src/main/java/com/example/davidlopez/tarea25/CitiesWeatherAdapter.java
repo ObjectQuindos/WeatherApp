@@ -19,6 +19,7 @@ public class CitiesWeatherAdapter extends ArrayAdapter<CityWeather> {
 
     Context context;
     ArrayList<CityWeather> citiesArray;
+    String[] imagesArray = {"cairo", "sydney", "madrid", "amsterdam", "tokyo", "berlin", "rio", "nuevadelhi", "toronto", "nuevayork"};
 
     public CitiesWeatherAdapter(Context context, ArrayList<CityWeather> cities) {
         super(context,0, cities);
@@ -50,6 +51,7 @@ public class CitiesWeatherAdapter extends ArrayAdapter<CityWeather> {
             public void onClick(View v) {
                 Intent intent = new Intent(context, DetailWeatherActivity.class);
                 intent.putExtra("cityWeather", citiesArray.get(position));
+                intent.putExtra("imageCity", imagesArray[position]);
                 context.startActivity(intent);
             }
         });

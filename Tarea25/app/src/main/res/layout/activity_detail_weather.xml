@@ -1,55 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/backDetailColor">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My App"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/sunny"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/weather"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Londres"
+            android:textSize="50sp"
+            android:id="@+id/generalWeather"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/minTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:text="Temp. minima:"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/minTemp"
+                android:layout_alignLeft="@+id/minTemp"
+                android:layout_alignRight="@+id/minTemp"
+                android:gravity="center"
+                android:text="25ºC"
+                android:textSize="17sp"
+                />
+
+            <TextView
+                android:id="@+id/maxTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:text="Temp. maxima:"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/maxTemp"
+                android:layout_alignLeft="@+id/maxTemp"
+                android:layout_alignRight="@+id/maxTemp"
+                android:gravity="center"
+                android:text="12ºC"
+                android:textSize="17sp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <ImageView
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:src="@drawable/sunny"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/weather"
-        android:padding="5dp"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Londres"
-        android:id="@+id/generalWeather"
-        android:padding="30dp"
-        />
-
-    <RelativeLayout
+        android:id="@+id/backcity"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="240dp"
+        android:src="@drawable/amsterdam"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="50dp"
-            android:layout_below="@+id/weatherView"
-            android:text="25ºC"
-            android:textSize="12dp"
-            android:id="@+id/max"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="50dp"
-            android:layout_below="@+id/weatherView"
-            android:text="12ºC"
-            android:textSize="12dp"
-            android:id="@+id/min"
-            />
-
-    </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>

@@ -7,19 +7,19 @@ public class CityWeather implements Serializable {
     Integer averageTemp;
     String generalWeather;
     String iconWeather;
-    Integer max;
     Integer min;
+    Integer max;
 
     public CityWeather(String cityName) {
         this.cityName = cityName;
     }
 
-    public CityWeather(String cityName, Integer averageTemp, String generalWeather, String iconWeather, Integer max, Integer min) {
+    public CityWeather(String cityName, Integer averageTemp, String generalWeather, String iconWeather, Integer min, Integer max) {
         this.cityName = cityName;
         this.averageTemp = averageTemp;
         this.generalWeather = generalWeather;
         this.iconWeather = iconWeather;
-        this.max = max;
         this.min = min;
+        this.max = max;
     }
 }

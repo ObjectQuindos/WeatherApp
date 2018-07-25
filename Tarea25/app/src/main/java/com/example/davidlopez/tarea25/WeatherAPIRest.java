@@ -53,7 +53,7 @@ public class WeatherAPIRest extends AsyncTask {
     private void getWeatherJson() throws IOException {
         cities = new ArrayList<CityWeather>();
 
-        URL weatherEndPoint = new URL("https://dl.dropboxusercontent.com/s/b5ppzw1jm4as4js/weather.json?dl=0");
+        URL weatherEndPoint = new URL("https://dl.dropboxusercontent.com/s/jjcujt610ulogbn/weather.json?dl=0");
         HttpsURLConnection connection = (HttpsURLConnection) weatherEndPoint.openConnection();
 
         InputStream response = null;
