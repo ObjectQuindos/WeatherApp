@@ -28,7 +28,7 @@ public class DetailWeatherActivity extends AppCompatActivity {
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
 
-        setSupportActionBar(tb);
+        //setSupportActionBar(tb);
         //mTitle.setText(toolbar.getTitle());
 
         //getSupportActionBar().setDisplayShowTitleEnabled(false);
